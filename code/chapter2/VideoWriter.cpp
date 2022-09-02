@@ -1,4 +1,11 @@
-#include <opencv2\opencv.hpp>
+/*
+ * @Author: zhanghao
+ * @Date: 2022-08-30 20:52:26
+ * @LastEditTime: 2022-09-02 20:27:05
+ * @FilePath: /hao_learnOpenCV4/code/chapter2/VideoWriter.cpp
+ * @Description: 
+ */
+#include <opencv2/opencv.hpp>
 #include <iostream>
 
 using namespace cv;
@@ -7,60 +14,59 @@ using namespace std;
 int main()
 {
 	Mat img;
-	VideoCapture video(0);  //Ê¹ÓÃÄ³¸öÉãÏñÍ·
+	VideoCapture video(0);  //ä½¿ç”¨æŸä¸ªæ‘„åƒå¤´
 
-	//¶ÁÈ¡ÊÓÆµ
+	//è¯»å–è§†é¢‘
 	//VideoCapture video;
 	//video.open("cup.mp4");  
 
-	if (!video.isOpened())  // ÅĞ¶ÏÊÇ·ñµ÷ÓÃ³É¹¦
+	if (!video.isOpened())  // åˆ¤æ–­è°ƒç”¨æ˜¯å¦æˆåŠŸ
 	{
-		cout << "´ò¿ªÉãÏñÍ·Ê§°Ü£¬ÇëÈ·ÊµÉãÏñÍ·ÊÇ·ñ°²×°³É¹¦";
+		cout << "please check your camera fine";
 		return -1;
 	}
 
-	video >> img;  //»ñÈ¡Í¼Ïñ
-	//¼ì²âÊÇ·ñ³É¹¦»ñÈ¡Í¼Ïñ
-	if (img.empty())   //ÅĞ¶ÏÓĞÃ»ÓĞ¶ÁÈ¡Í¼Ïñ³É¹¦
+	video >> img;  //è·å–å›¾åƒ æ£€æµ‹æ˜¯å¦æˆåŠŸè·å–å›¾åƒ
+	if (img.empty())   //åˆ¤æ–­è¯»å–å›¾åƒæ˜¯å¦æˆåŠŸ
 	{
-		cout << "Ã»ÓĞ»ñÈ¡µ½Í¼Ïñ" << endl;
+		cout << "no image obtained" << endl;
 		return -1;
 	}
-	bool isColor = (img.type() == CV_8UC3);  //ÅĞ¶ÏÏà»ú£¨ÊÓÆµ£©ÀàĞÍÊÇ·ñÎª²ÊÉ«
+	bool isColor = (img.type() == CV_8UC3);  //åˆ¤æ–­ç›¸æœºç±»å‹æ˜¯å¦ä¸ºå½©è‰²
 
 	VideoWriter writer;
-	int codec = VideoWriter::fourcc('M', 'J', 'P', 'G');  // Ñ¡Ôñ±àÂë¸ñÊ½
-	//OpenCV 4.0°æ±¾ÉèÖÃ±àÂë¸ñÊ½
+	int codec = VideoWriter::fourcc('M', 'J', 'P', 'G');  //é€‰æ‹©ç¼–ç æ ¼å¼
+	//OpenCV 4.0ç‰ˆ è®¾ç½®ç¼–ç æ ¼å¼
 	//int codec = CV_FOURCC('M', 'J', 'P', 'G'); 
 
-	double fps = 25.0;  //ÉèÖÃÊÓÆµÖ¡ÂÊ 
-	string filename = "live.avi";  //±£´æµÄÊÓÆµÎÄ¼şÃû³Æ
-	writer.open(filename, codec, fps, img.size(), isColor);  //´´½¨±£´æÊÓÆµÎÄ¼şµÄÊÓÆµÁ÷
+	double fps = 25.0;  //è®¾ç½®è§†é¢‘å¸§ç‡
+	string filename = "live.avi";  //ä¿å­˜çš„è§†é¢‘æ–‡ä»¶åç§°
+	writer.open(filename, codec, fps, img.size(), isColor); // Create a video stream that holds the video file
 
-	if (!writer.isOpened())   //ÅĞ¶ÏÊÓÆµÁ÷ÊÇ·ñ´´½¨³É¹¦
+	if (!writer.isOpened()) // Determines whether the video stream was created successfully
 	{
-		cout << "´ò¿ªÊÓÆµÎÄ¼şÊ§°Ü£¬ÇëÈ·ÊµÊÇ·ñÎªºÏ·¨ÊäÈë" << endl;
+		cout << "Failed to open the video file. Please check whether the input is valid" << endl;
 		return -1;
 	}
 
 	while (1)
 	{
-		//¼ì²âÊÇ·ñÖ´ĞĞÍê±Ï
-		if (!video.read(img))   //ÅĞ¶ÏÄÜ¶¼¼ÌĞø´ÓÉãÏñÍ·»òÕßÊÓÆµÎÄ¼şÖĞ¶Á³öÒ»Ö¡Í¼Ïñ
+		// Check whether the execution is complete
+		if (!video.read(img)) // Determine whether to read another frame from the camera or video file
 		{
-			cout << "ÉãÏñÍ·¶Ï¿ªÁ¬½Ó»òÕßÊÓÆµ¶ÁÈ¡Íê³É" << endl;
+			cout << "The camera is disconnected or the video is read" << endl;
 			break;
 		}
-		writer.write(img);  //°ÑÍ¼ÏñĞ´ÈëÊÓÆµÁ÷
-		//writer << img;
-		imshow("Live", img);  //ÏÔÊ¾Í¼Ïñ
+		writer.write(img); // Write the image to the video stream
+		// writer << img;
+		imshow("Live", img);  //????????
 		char c = waitKey(50);
-		if (c == 27)  //°´ESC°¸¼şÍË³öÊÓÆµ±£´æ
+		if (c == 27)  //???ESC????????????????????
 		{
 			break;
 		}
 	}
-	// ÍË³ö³ÌĞòÊ±¿Ì×Ô¶¯¹Ø±ÕÊÓÆµÁ÷
+	// ?????????????????????????????
 	//video.release();
 	//writer.release();	
 	return 0;

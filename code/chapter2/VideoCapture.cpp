@@ -1,4 +1,11 @@
-#include <opencv2\opencv.hpp>
+/*
+ * @Author: zhanghao
+ * @Date: 2022-08-30 20:52:26
+ * @LastEditTime: 2022-08-31 14:36:46
+ * @FilePath: /hao_learnOpenCV4/code/chapter2/VideoCapture.cpp
+ * @Description: 
+ */
+#include <opencv2/opencv.hpp>
 #include <iostream>
 
 using namespace std;
@@ -6,18 +13,19 @@ using namespace cv;
 
 int main()
 {
-	system("color F0");  //¸ü¸ÄÊä³ö½çÃæÑÕÉ«
-	VideoCapture video("cup.mp4");
+	system("color F0");  //æ›´æ”¹è¾“å‡ºç•Œé¢çš„é¢œè‰²
+	// VideoCapture video("/home/hao007/github/hao_learnOpenCV4/data/cup.mp4");
+	VideoCapture video(0);
 	if (video.isOpened())
 	{
-		cout << "ÊÓÆµÖĞÍ¼ÏñµÄ¿í¶È=" << video.get(CAP_PROP_FRAME_WIDTH) << endl;
-		cout << "ÊÓÆµÖĞÍ¼ÏñµÄ¸ß¶È=" << video.get(CAP_PROP_FRAME_HEIGHT) << endl;
-		cout << "ÊÓÆµÖ¡ÂÊ=" << video.get(CAP_PROP_FPS) << endl;
-		cout << "ÊÓÆµµÄ×ÜÖ¡Êı=" << video.get(CAP_PROP_FRAME_COUNT);
+		cout << "è§†é¢‘ä¸­å›¾åƒçš„å®½åº¦=" << video.get(CAP_PROP_FRAME_WIDTH) << endl;
+		cout << "è§†é¢‘ä¸­å›¾åƒçš„é«˜åº¦=" << video.get(CAP_PROP_FRAME_HEIGHT) << endl;
+		cout << "è§†é¢‘å¸§ç‡=" << video.get(CAP_PROP_FPS) << endl;
+		cout << "è§†é¢‘çš„æ€»å¸§æ•°=" << video.get(CAP_PROP_FRAME_COUNT);
 	}
 	else
 	{
-		cout << "ÇëÈ·ÈÏÊÓÆµÎÄ¼şÃû³ÆÊÇ·ñÕıÈ·" << endl;
+		cout << "è¯·ç¡®è®¤è§†é¢‘æ–‡ä»¶åç§°æ˜¯å¦æ­£ç¡®" << endl;
 		return -1;
 	}
 	while (1)

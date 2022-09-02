@@ -1,3 +1,10 @@
+/*
+ * @Author: zhanghao
+ * @Date: 2022-08-30 20:52:26
+ * @LastEditTime: 2022-09-02 19:55:18
+ * @FilePath: /hao_learnOpenCV4/code/chapter2/myXMLandYMAL.cpp
+ * @Description: 
+ */
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <string>
