@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named myXMLandYMAL
+
+# Build rule for target.
+myXMLandYMAL: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myXMLandYMAL
+.PHONY : myXMLandYMAL
+
+# fast build rule for target.
+myXMLandYMAL/fast:
+	$(MAKE) -f CMakeFiles/myXMLandYMAL.dir/build.make CMakeFiles/myXMLandYMAL.dir/build
+.PHONY : myXMLandYMAL/fast
+
+#=============================================================================
+# Target rules for targets named VideoWriter
+
+# Build rule for target.
+VideoWriter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 VideoWriter
+.PHONY : VideoWriter
+
+# fast build rule for target.
+VideoWriter/fast:
+	$(MAKE) -f CMakeFiles/VideoWriter.dir/build.make CMakeFiles/VideoWriter.dir/build
+.PHONY : VideoWriter/fast
+
+#=============================================================================
 # Target rules for targets named ImgWriter
 
 # Build rule for target.
@@ -190,6 +216,60 @@ VideoCapture.cpp.s:
 	$(MAKE) -f CMakeFiles/VideoCapture.dir/build.make CMakeFiles/VideoCapture.dir/VideoCapture.cpp.s
 .PHONY : VideoCapture.cpp.s
 
+VideoWriter.o: VideoWriter.cpp.o
+
+.PHONY : VideoWriter.o
+
+# target to build an object file
+VideoWriter.cpp.o:
+	$(MAKE) -f CMakeFiles/VideoWriter.dir/build.make CMakeFiles/VideoWriter.dir/VideoWriter.cpp.o
+.PHONY : VideoWriter.cpp.o
+
+VideoWriter.i: VideoWriter.cpp.i
+
+.PHONY : VideoWriter.i
+
+# target to preprocess a source file
+VideoWriter.cpp.i:
+	$(MAKE) -f CMakeFiles/VideoWriter.dir/build.make CMakeFiles/VideoWriter.dir/VideoWriter.cpp.i
+.PHONY : VideoWriter.cpp.i
+
+VideoWriter.s: VideoWriter.cpp.s
+
+.PHONY : VideoWriter.s
+
+# target to generate assembly for a file
+VideoWriter.cpp.s:
+	$(MAKE) -f CMakeFiles/VideoWriter.dir/build.make CMakeFiles/VideoWriter.dir/VideoWriter.cpp.s
+.PHONY : VideoWriter.cpp.s
+
+myXMLandYMAL.o: myXMLandYMAL.cpp.o
+
+.PHONY : myXMLandYMAL.o
+
+# target to build an object file
+myXMLandYMAL.cpp.o:
+	$(MAKE) -f CMakeFiles/myXMLandYMAL.dir/build.make CMakeFiles/myXMLandYMAL.dir/myXMLandYMAL.cpp.o
+.PHONY : myXMLandYMAL.cpp.o
+
+myXMLandYMAL.i: myXMLandYMAL.cpp.i
+
+.PHONY : myXMLandYMAL.i
+
+# target to preprocess a source file
+myXMLandYMAL.cpp.i:
+	$(MAKE) -f CMakeFiles/myXMLandYMAL.dir/build.make CMakeFiles/myXMLandYMAL.dir/myXMLandYMAL.cpp.i
+.PHONY : myXMLandYMAL.cpp.i
+
+myXMLandYMAL.s: myXMLandYMAL.cpp.s
+
+.PHONY : myXMLandYMAL.s
+
+# target to generate assembly for a file
+myXMLandYMAL.cpp.s:
+	$(MAKE) -f CMakeFiles/myXMLandYMAL.dir/build.make CMakeFiles/myXMLandYMAL.dir/myXMLandYMAL.cpp.s
+.PHONY : myXMLandYMAL.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -198,6 +278,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... myXMLandYMAL"
+	@echo "... VideoWriter"
 	@echo "... ImgWriter"
 	@echo "... VideoCapture"
 	@echo "... ImgWriter.o"
@@ -206,6 +288,12 @@ help:
 	@echo "... VideoCapture.o"
 	@echo "... VideoCapture.i"
 	@echo "... VideoCapture.s"
+	@echo "... VideoWriter.o"
+	@echo "... VideoWriter.i"
+	@echo "... VideoWriter.s"
+	@echo "... myXMLandYMAL.o"
+	@echo "... myXMLandYMAL.i"
+	@echo "... myXMLandYMAL.s"
 .PHONY : help
 
 

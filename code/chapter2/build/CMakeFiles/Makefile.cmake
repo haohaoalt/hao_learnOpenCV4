@@ -51,6 +51,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/myXMLandYMAL.dir/DependInfo.cmake"
+  "CMakeFiles/VideoWriter.dir/DependInfo.cmake"
   "CMakeFiles/ImgWriter.dir/DependInfo.cmake"
   "CMakeFiles/VideoCapture.dir/DependInfo.cmake"
   )

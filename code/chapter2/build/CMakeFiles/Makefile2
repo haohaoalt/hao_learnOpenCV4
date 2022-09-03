@@ -53,6 +53,8 @@ CMAKE_BINARY_DIR = /home/hao007/github/hao_learnOpenCV4/code/chapter2/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/myXMLandYMAL.dir/all
+all: CMakeFiles/VideoWriter.dir/all
 all: CMakeFiles/ImgWriter.dir/all
 all: CMakeFiles/VideoCapture.dir/all
 
@@ -64,10 +66,66 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/myXMLandYMAL.dir/clean
+clean: CMakeFiles/VideoWriter.dir/clean
 clean: CMakeFiles/ImgWriter.dir/clean
 clean: CMakeFiles/VideoCapture.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/myXMLandYMAL.dir
+
+# All Build rule for target.
+CMakeFiles/myXMLandYMAL.dir/all:
+	$(MAKE) -f CMakeFiles/myXMLandYMAL.dir/build.make CMakeFiles/myXMLandYMAL.dir/depend
+	$(MAKE) -f CMakeFiles/myXMLandYMAL.dir/build.make CMakeFiles/myXMLandYMAL.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/github/hao_learnOpenCV4/code/chapter2/build/CMakeFiles --progress-num=7,8 "Built target myXMLandYMAL"
+.PHONY : CMakeFiles/myXMLandYMAL.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/myXMLandYMAL.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter2/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/myXMLandYMAL.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter2/build/CMakeFiles 0
+.PHONY : CMakeFiles/myXMLandYMAL.dir/rule
+
+# Convenience name for target.
+myXMLandYMAL: CMakeFiles/myXMLandYMAL.dir/rule
+
+.PHONY : myXMLandYMAL
+
+# clean rule for target.
+CMakeFiles/myXMLandYMAL.dir/clean:
+	$(MAKE) -f CMakeFiles/myXMLandYMAL.dir/build.make CMakeFiles/myXMLandYMAL.dir/clean
+.PHONY : CMakeFiles/myXMLandYMAL.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/VideoWriter.dir
+
+# All Build rule for target.
+CMakeFiles/VideoWriter.dir/all:
+	$(MAKE) -f CMakeFiles/VideoWriter.dir/build.make CMakeFiles/VideoWriter.dir/depend
+	$(MAKE) -f CMakeFiles/VideoWriter.dir/build.make CMakeFiles/VideoWriter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/github/hao_learnOpenCV4/code/chapter2/build/CMakeFiles --progress-num=5,6 "Built target VideoWriter"
+.PHONY : CMakeFiles/VideoWriter.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/VideoWriter.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter2/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/VideoWriter.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter2/build/CMakeFiles 0
+.PHONY : CMakeFiles/VideoWriter.dir/rule
+
+# Convenience name for target.
+VideoWriter: CMakeFiles/VideoWriter.dir/rule
+
+.PHONY : VideoWriter
+
+# clean rule for target.
+CMakeFiles/VideoWriter.dir/clean:
+	$(MAKE) -f CMakeFiles/VideoWriter.dir/build.make CMakeFiles/VideoWriter.dir/clean
+.PHONY : CMakeFiles/VideoWriter.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ImgWriter.dir

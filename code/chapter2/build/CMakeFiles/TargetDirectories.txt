@@ -1,4 +1,6 @@
 /home/hao007/github/hao_learnOpenCV4/code/chapter2/build/CMakeFiles/rebuild_cache.dir
 /home/hao007/github/hao_learnOpenCV4/code/chapter2/build/CMakeFiles/edit_cache.dir
+/home/hao007/github/hao_learnOpenCV4/code/chapter2/build/CMakeFiles/myXMLandYMAL.dir
+/home/hao007/github/hao_learnOpenCV4/code/chapter2/build/CMakeFiles/VideoWriter.dir
 /home/hao007/github/hao_learnOpenCV4/code/chapter2/build/CMakeFiles/ImgWriter.dir
 /home/hao007/github/hao_learnOpenCV4/code/chapter2/build/CMakeFiles/VideoCapture.dir

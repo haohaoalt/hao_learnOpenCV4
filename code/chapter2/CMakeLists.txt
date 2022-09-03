@@ -19,3 +19,8 @@ target_link_libraries(VideoCapture ${OpenCV_LIBS}) #链接 lib 文件到可执�
 add_executable(ImgWriter ImgWriter.cpp) #将程序生成可执行文件
 target_link_libraries(ImgWriter ${OpenCV_LIBS}) #链接 lib 文件到可执行文件中
 
+add_executable(VideoWriter VideoWriter.cpp) #将程序生成可执行文件
+target_link_libraries(VideoWriter ${OpenCV_LIBS}) #链接 lib 文件到可执行文件中
+
+add_executable(myXMLandYMAL myXMLandYMAL.cpp) #将程序生成可执行文件
+target_link_libraries(myXMLandYMAL ${OpenCV_LIBS}) #链接 lib 文件到可执行文件中

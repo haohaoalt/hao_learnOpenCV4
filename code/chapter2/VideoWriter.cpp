@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghao
  * @Date: 2022-08-30 20:52:26
- * @LastEditTime: 2022-09-02 20:27:05
+ * @LastEditTime: 2022-09-03 09:03:28
  * @FilePath: /hao_learnOpenCV4/code/chapter2/VideoWriter.cpp
  * @Description: 
  */
@@ -59,14 +59,14 @@ int main()
 		}
 		writer.write(img); // Write the image to the video stream
 		// writer << img;
-		imshow("Live", img);  //????????
+		imshow("Live", img);  //show inage
 		char c = waitKey(50);
-		if (c == 27)  //???ESC????????????????????
+		if (c == 27)  //press esc and break
 		{
 			break;
 		}
 	}
-	// ?????????????????????????????
+	// auto close video
 	//video.release();
 	//writer.release();	
 	return 0;
