@@ -1,4 +1,11 @@
-#include <opencv2\opencv.hpp>
+/*
+ * @Author: zhanghao
+ * @Date: 2022-08-30 20:52:26
+ * @LastEditTime: 2022-09-03 12:18:28
+ * @FilePath: /hao_learnOpenCV4/code/chapter3/mySplitAndMerge.cpp
+ * @Description: é€šé“åˆ†ç¦»ä¸åˆå¹¶
+ */
+#include <opencv2/opencv.hpp>
 #include <iostream>
 #include <vector>
 
@@ -8,43 +15,46 @@ using namespace cv;
 int main()
 {
 	Mat img = imread("lena.png");
-	if (img.empty())	{		cout << "ÇëÈ·ÈÏÍ¼ÏñÎÄ¼şÃû³ÆÊÇ·ñÕıÈ·" << endl;		return -1;	}
+	if (img.empty())
+	{
+		cout << "check file name" << endl;
+		return -1;
+	}
 	Mat HSV;
 	cvtColor(img, HSV, COLOR_RGB2HSV);
-	Mat imgs0, imgs1, imgs2;  //ÓÃÓÚ´æ·ÅÊı×éÀàĞÍµÄ½á¹û
-	Mat imgv0, imgv1, imgv2;  //ÓÃÓÚ´æ·ÅvectorÀàĞÍµÄ½á¹û
-	Mat result0, result1, result2;  //¶àÍ¨µÀºÏ²¢µÄ½á¹û
-
-									//ÊäÈëÊı×é²ÎÊıµÄ¶àÍ¨µÀ·ÖÀëÓëºÏ²¢
+	Mat imgs0, imgs1, imgs2;  // Holds the result of an array type
+	Mat imgv0, imgv1, imgv2;  // Holds the result of a vector type
+	Mat result0, result1, result2; // The result of multichannel merging
+	// Multichannel separation and merging of input array parameters
 	Mat imgs[3];
 	split(img, imgs);
 	imgs0 = imgs[0];
 	imgs1 = imgs[1];
 	imgs2 = imgs[2];
-	imshow("RGB-BÍ¨µÀ", imgs0);  //ÏÔÊ¾·ÖÀëºóBÍ¨µÀµÄÏñËØÖµ
-	imshow("RGB-GÍ¨µÀ", imgs1);  //ÏÔÊ¾·ÖÀëºóGÍ¨µÀµÄÏñËØÖµ
-	imshow("RGB-RÍ¨µÀ", imgs2);  //ÏÔÊ¾·ÖÀëºóRÍ¨µÀµÄÏñËØÖµ
-	imgs[2] = img;  //½«Êı×éÖĞµÄÍ¼ÏñÍ¨µÀÊı±ä³É²»Í³Ò»
-	merge(imgs, 3, result0);  //ºÏ²¢Í¼Ïñ
-							  //imshow("result0", result0);  //imshow×î¶àÏÔÊ¾4¸öÍ¨µÀ£¬Òò´Ë½á¹ûÔÚImage WatchÖĞ²é¿´
+	imshow("RGB-B channel", imgs0);	 // Display the pixel value of B channel after separation
+	imshow("RGB-G channel", imgs1);	 // Display the pixel value of G channel after separation
+	imshow("RGB-R channel", imgs2);	 //  Display the pixel value of R channel after separation
+	imgs[2] = img;					 // Change the number of channels in the array to inconsistent
+	merge(imgs, 3, result0);  // merge image
+							  //imshow("result0", result0);  //imshow æœ€å¤šæ˜¾ç¤º4ä¸ªé€šé“
 	Mat zero = cv::Mat::zeros(img.rows, img.cols, CV_8UC1);
 	imgs[0] = zero;
 	imgs[2] = zero;
-	merge(imgs, 3, result1);  //ÓÃÓÚ»¹Ô­GÍ¨µÀµÄÕæÊµÇé¿ö£¬ºÏ²¢½á¹ûÎªÂÌÉ«
-	imshow("result1", result1);  //ÏÔÊ¾ºÏ²¢½á¹û
+	merge(imgs, 3, result1);  //ï¿½ï¿½ï¿½Ú»ï¿½Ô­GÍ¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï²ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½É«
+	imshow("result1", result1);  //ï¿½ï¿½Ê¾ï¿½Ï²ï¿½ï¿½ï¿½ï¿½
 
-								 //ÊäÈëvector²ÎÊıµÄ¶àÍ¨µÀ·ÖÀëÓëºÏ²¢
+								 //ï¿½ï¿½ï¿½ï¿½vectorï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï²ï¿½
 	vector<Mat> imgv;
 	split(HSV, imgv);
 	imgv0 = imgv.at(0);
 	imgv1 = imgv.at(1);
 	imgv2 = imgv.at(2);
-	imshow("HSV-HÍ¨µÀ", imgv0);  //ÏÔÊ¾·ÖÀëºóHÍ¨µÀµÄÏñËØÖµ
-	imshow("HSV-SÍ¨µÀ", imgv1);  //ÏÔÊ¾·ÖÀëºóSÍ¨µÀµÄÏñËØÖµ
-	imshow("HSV-VÍ¨µÀ", imgv2);  //ÏÔÊ¾·ÖÀëºóVÍ¨µÀµÄÏñËØÖµ
-	imgv.push_back(HSV);  //½«vectorÖĞµÄÍ¼ÏñÍ¨µÀÊı±ä³É²»Í³Ò»
-	merge(imgv, result2);  //ºÏ²¢Í¼Ïñ
-						   //imshow("result2", result2);  /imshow×î¶àÏÔÊ¾4¸öÍ¨µÀ£¬Òò´Ë½á¹ûÔÚImage WatchÖĞ²é¿´
+	imshow("HSV-HÍ¨ï¿½ï¿½", imgv0);  //ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½HÍ¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+	imshow("HSV-SÍ¨ï¿½ï¿½", imgv1);  //ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½SÍ¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+	imshow("HSV-VÍ¨ï¿½ï¿½", imgv2);  //ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½VÍ¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+	imgv.push_back(HSV);  //ï¿½ï¿½vectorï¿½Ğµï¿½Í¼ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É²ï¿½Í³Ò»
+	merge(imgv, result2);  //ï¿½Ï²ï¿½Í¼ï¿½ï¿½
+						   //imshow("result2", result2);  /imshowï¿½ï¿½ï¿½ï¿½ï¿½Ê¾4ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë½ï¿½ï¿½ï¿½ï¿½Image Watchï¿½Ğ²é¿´
 	waitKey(0);
 	return 0;
 }
