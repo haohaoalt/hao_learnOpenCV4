@@ -53,6 +53,8 @@ CMAKE_BINARY_DIR = /home/hao007/github/hao_learnOpenCV4/code/chapter3/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/myWarpPerspective.dir/all
+all: CMakeFiles/myfindMinAndMax.dir/all
 all: CMakeFiles/mySplitAndMerge.dir/all
 all: CMakeFiles/myCvColor.dir/all
 
@@ -64,10 +66,66 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/myWarpPerspective.dir/clean
+clean: CMakeFiles/myfindMinAndMax.dir/clean
 clean: CMakeFiles/mySplitAndMerge.dir/clean
 clean: CMakeFiles/myCvColor.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/myWarpPerspective.dir
+
+# All Build rule for target.
+CMakeFiles/myWarpPerspective.dir/all:
+	$(MAKE) -f CMakeFiles/myWarpPerspective.dir/build.make CMakeFiles/myWarpPerspective.dir/depend
+	$(MAKE) -f CMakeFiles/myWarpPerspective.dir/build.make CMakeFiles/myWarpPerspective.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/github/hao_learnOpenCV4/code/chapter3/build/CMakeFiles --progress-num=5,6 "Built target myWarpPerspective"
+.PHONY : CMakeFiles/myWarpPerspective.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/myWarpPerspective.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter3/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/myWarpPerspective.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter3/build/CMakeFiles 0
+.PHONY : CMakeFiles/myWarpPerspective.dir/rule
+
+# Convenience name for target.
+myWarpPerspective: CMakeFiles/myWarpPerspective.dir/rule
+
+.PHONY : myWarpPerspective
+
+# clean rule for target.
+CMakeFiles/myWarpPerspective.dir/clean:
+	$(MAKE) -f CMakeFiles/myWarpPerspective.dir/build.make CMakeFiles/myWarpPerspective.dir/clean
+.PHONY : CMakeFiles/myWarpPerspective.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/myfindMinAndMax.dir
+
+# All Build rule for target.
+CMakeFiles/myfindMinAndMax.dir/all:
+	$(MAKE) -f CMakeFiles/myfindMinAndMax.dir/build.make CMakeFiles/myfindMinAndMax.dir/depend
+	$(MAKE) -f CMakeFiles/myfindMinAndMax.dir/build.make CMakeFiles/myfindMinAndMax.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/github/hao_learnOpenCV4/code/chapter3/build/CMakeFiles --progress-num=7,8 "Built target myfindMinAndMax"
+.PHONY : CMakeFiles/myfindMinAndMax.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/myfindMinAndMax.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter3/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/myfindMinAndMax.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter3/build/CMakeFiles 0
+.PHONY : CMakeFiles/myfindMinAndMax.dir/rule
+
+# Convenience name for target.
+myfindMinAndMax: CMakeFiles/myfindMinAndMax.dir/rule
+
+.PHONY : myfindMinAndMax
+
+# clean rule for target.
+CMakeFiles/myfindMinAndMax.dir/clean:
+	$(MAKE) -f CMakeFiles/myfindMinAndMax.dir/build.make CMakeFiles/myfindMinAndMax.dir/clean
+.PHONY : CMakeFiles/myfindMinAndMax.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/mySplitAndMerge.dir

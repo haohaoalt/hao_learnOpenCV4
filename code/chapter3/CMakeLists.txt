@@ -19,3 +19,10 @@ target_link_libraries(myCvColor ${OpenCV_LIBS}) #链接 lib 文件到可执行�
 add_executable(mySplitAndMerge mySplitAndMerge.cpp) #将程序生成可执行文件
 target_link_libraries(mySplitAndMerge ${OpenCV_LIBS}) #链接 lib 文件到可执行文件中
 
+
+add_executable(myfindMinAndMax myfindMinAndMax.cpp) #将程序生成可执行文件
+target_link_libraries(myfindMinAndMax ${OpenCV_LIBS}) #链接 lib 文件到可执行文件中
+
+
+add_executable(myWarpPerspective myWarpPerspective.cpp) #将程序生成可执行文件
+target_link_libraries(myWarpPerspective ${OpenCV_LIBS}) #链接 lib 文件到可执行文件中

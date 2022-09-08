@@ -1,4 +1,11 @@
-#include <opencv2\opencv.hpp>
+/*
+ * @Author: zhanghao
+ * @Date: 2022-08-30 20:52:26
+ * @LastEditTime: 2022-09-04 15:32:46
+ * @FilePath: /hao_learnOpenCV4/code/chapter3/myConcat.cpp
+ * @Description: 
+ */
+#include <opencv2/opencv.hpp>
 #include <iostream>
 
 using namespace std;
@@ -6,48 +13,49 @@ using namespace cv;
 
 int main()
 {
-	//¾ØÕóÊý×éµÄºáÊúÁ¬½Ó
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	Mat matArray[] = { Mat(1, 2, CV_32FC1, cv::Scalar(1)),
 		Mat(1, 2, CV_32FC1, cv::Scalar(2)) };
 	Mat vout, hout;
 	vconcat(matArray, 2, vout);
-	cout << "Í¼ÏñÊý×éÊúÏòÁ¬½Ó£º" << endl << vout << endl;
+	cout << "Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½" << endl << vout << endl;
 	hconcat(matArray, 2, hout);
-	cout << "Í¼ÏñÊý×éºáÏòÁ¬½Ó£º" << endl << hout << endl;
+	cout << "Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½" << endl << hout << endl;
 
-	//¾ØÕóµÄºáÊúÆ´½Ó
+	//ï¿½ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½Æ´ï¿½ï¿½
 	Mat A = (cv::Mat_<float>(2, 2) << 1, 7, 2, 8);
 	Mat B = (cv::Mat_<float>(2, 2) << 4, 10, 5, 11);
 	Mat vC, hC;
 	vconcat(A, B, vC);
-	cout << "¶à¸öÍ¼ÏñÊúÏòÁ¬½Ó£º" << endl << vC << endl;
+	cout << "ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½" << endl << vC << endl;
 	hconcat(A, B, hC);
-	cout << "¶à¸öÍ¼ÏñºáÏòÁ¬½Ó£º" << endl << hC << endl;
+	cout << "ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½" << endl << hC << endl;
 
-	//¶ÁÈ¡4¸ö×ÓÍ¼Ïñ£¬00±íÊ¾×óÉÏ½Ç¡¢01±íÊ¾ÓÒÉÏ½Ç¡¢10±íÊ¾×óÏÂ½Ç¡¢11±íÊ¾ÓÒÏÂ½Ç
+	//ï¿½ï¿½È¡4ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½00ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ï½Ç¡ï¿½01ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ï½Ç¡ï¿½10ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Â½Ç¡ï¿½11ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Â½ï¿½
 	Mat img00 = imread("lena00.png");
 	Mat img01 = imread("lena01.png");
 	Mat img10 = imread("lena10.png");
 	Mat img11 = imread("lena11.png");
 	if (img00.empty() || img01.empty() || img10.empty() || img11.empty())
 	{
-		cout << "ÇëÈ·ÈÏÍ¼ÏñÎÄ¼þÃû³ÆÊÇ·ñÕýÈ·" << endl;		return -1;
+		cout << "ï¿½ï¿½È·ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½È·" << endl;
+		return -1;
 	}
-	//ÏÔÊ¾4¸ö×ÓÍ¼Ïñ
+	//ï¿½ï¿½Ê¾4ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½
 	imshow("img00", img00);
 	imshow("img01", img01);
 	imshow("img10", img10);
 	imshow("img11", img11);
 
-	//Í¼ÏñÁ¬½Ó
+	//Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	Mat img, img0, img1;
-	//Í¼ÏñºáÏòÁ¬½Ó
+	//Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	hconcat(img00, img01, img0);
 	hconcat(img10, img11, img1);
-	//ºáÏòÁ¬½Ó½á¹ûÔÙ½øÐÐÊúÏòÁ¬½Ó
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó½ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	vconcat(img0, img1, img);
 
-	//ÏÔÊ¾Á¬½ÓÍ¼ÏñµÄ½á¹û
+	//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Ä½ï¿½ï¿½
 	imshow("img0", img0);
 	imshow("img1", img1);
 	imshow("img", img);

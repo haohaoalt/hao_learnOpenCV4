@@ -51,6 +51,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/myWarpPerspective.dir/DependInfo.cmake"
+  "CMakeFiles/myfindMinAndMax.dir/DependInfo.cmake"
   "CMakeFiles/mySplitAndMerge.dir/DependInfo.cmake"
   "CMakeFiles/myCvColor.dir/DependInfo.cmake"
   )

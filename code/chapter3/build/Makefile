@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/hao007/github/hao_learnOpenCV4/code/chapter3/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -109,6 +109,32 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named myWarpPerspective
+
+# Build rule for target.
+myWarpPerspective: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myWarpPerspective
+.PHONY : myWarpPerspective
+
+# fast build rule for target.
+myWarpPerspective/fast:
+	$(MAKE) -f CMakeFiles/myWarpPerspective.dir/build.make CMakeFiles/myWarpPerspective.dir/build
+.PHONY : myWarpPerspective/fast
+
+#=============================================================================
+# Target rules for targets named myfindMinAndMax
+
+# Build rule for target.
+myfindMinAndMax: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myfindMinAndMax
+.PHONY : myfindMinAndMax
+
+# fast build rule for target.
+myfindMinAndMax/fast:
+	$(MAKE) -f CMakeFiles/myfindMinAndMax.dir/build.make CMakeFiles/myfindMinAndMax.dir/build
+.PHONY : myfindMinAndMax/fast
 
 #=============================================================================
 # Target rules for targets named mySplitAndMerge
@@ -190,14 +216,70 @@ mySplitAndMerge.cpp.s:
 	$(MAKE) -f CMakeFiles/mySplitAndMerge.dir/build.make CMakeFiles/mySplitAndMerge.dir/mySplitAndMerge.cpp.s
 .PHONY : mySplitAndMerge.cpp.s
 
+myWarpPerspective.o: myWarpPerspective.cpp.o
+
+.PHONY : myWarpPerspective.o
+
+# target to build an object file
+myWarpPerspective.cpp.o:
+	$(MAKE) -f CMakeFiles/myWarpPerspective.dir/build.make CMakeFiles/myWarpPerspective.dir/myWarpPerspective.cpp.o
+.PHONY : myWarpPerspective.cpp.o
+
+myWarpPerspective.i: myWarpPerspective.cpp.i
+
+.PHONY : myWarpPerspective.i
+
+# target to preprocess a source file
+myWarpPerspective.cpp.i:
+	$(MAKE) -f CMakeFiles/myWarpPerspective.dir/build.make CMakeFiles/myWarpPerspective.dir/myWarpPerspective.cpp.i
+.PHONY : myWarpPerspective.cpp.i
+
+myWarpPerspective.s: myWarpPerspective.cpp.s
+
+.PHONY : myWarpPerspective.s
+
+# target to generate assembly for a file
+myWarpPerspective.cpp.s:
+	$(MAKE) -f CMakeFiles/myWarpPerspective.dir/build.make CMakeFiles/myWarpPerspective.dir/myWarpPerspective.cpp.s
+.PHONY : myWarpPerspective.cpp.s
+
+myfindMinAndMax.o: myfindMinAndMax.cpp.o
+
+.PHONY : myfindMinAndMax.o
+
+# target to build an object file
+myfindMinAndMax.cpp.o:
+	$(MAKE) -f CMakeFiles/myfindMinAndMax.dir/build.make CMakeFiles/myfindMinAndMax.dir/myfindMinAndMax.cpp.o
+.PHONY : myfindMinAndMax.cpp.o
+
+myfindMinAndMax.i: myfindMinAndMax.cpp.i
+
+.PHONY : myfindMinAndMax.i
+
+# target to preprocess a source file
+myfindMinAndMax.cpp.i:
+	$(MAKE) -f CMakeFiles/myfindMinAndMax.dir/build.make CMakeFiles/myfindMinAndMax.dir/myfindMinAndMax.cpp.i
+.PHONY : myfindMinAndMax.cpp.i
+
+myfindMinAndMax.s: myfindMinAndMax.cpp.s
+
+.PHONY : myfindMinAndMax.s
+
+# target to generate assembly for a file
+myfindMinAndMax.cpp.s:
+	$(MAKE) -f CMakeFiles/myfindMinAndMax.dir/build.make CMakeFiles/myfindMinAndMax.dir/myfindMinAndMax.cpp.s
+.PHONY : myfindMinAndMax.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... myWarpPerspective"
+	@echo "... myfindMinAndMax"
 	@echo "... mySplitAndMerge"
 	@echo "... myCvColor"
 	@echo "... myCvColor.o"
@@ -206,6 +288,12 @@ help:
 	@echo "... mySplitAndMerge.o"
 	@echo "... mySplitAndMerge.i"
 	@echo "... mySplitAndMerge.s"
+	@echo "... myWarpPerspective.o"
+	@echo "... myWarpPerspective.i"
+	@echo "... myWarpPerspective.s"
+	@echo "... myfindMinAndMax.o"
+	@echo "... myfindMinAndMax.i"
+	@echo "... myfindMinAndMax.s"
 .PHONY : help
 
 

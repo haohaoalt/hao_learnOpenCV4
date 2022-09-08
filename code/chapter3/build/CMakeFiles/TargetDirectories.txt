@@ -1,4 +1,6 @@
-/home/hao007/github/hao_learnOpenCV4/code/chapter3/build/CMakeFiles/rebuild_cache.dir
 /home/hao007/github/hao_learnOpenCV4/code/chapter3/build/CMakeFiles/edit_cache.dir
+/home/hao007/github/hao_learnOpenCV4/code/chapter3/build/CMakeFiles/rebuild_cache.dir
+/home/hao007/github/hao_learnOpenCV4/code/chapter3/build/CMakeFiles/myWarpPerspective.dir
+/home/hao007/github/hao_learnOpenCV4/code/chapter3/build/CMakeFiles/myfindMinAndMax.dir
 /home/hao007/github/hao_learnOpenCV4/code/chapter3/build/CMakeFiles/mySplitAndMerge.dir
 /home/hao007/github/hao_learnOpenCV4/code/chapter3/build/CMakeFiles/myCvColor.dir

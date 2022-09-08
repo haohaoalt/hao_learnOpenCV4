@@ -1,4 +1,11 @@
-#include <opencv2\opencv.hpp>
+/*
+ * @Author: zhanghao
+ * @Date: 2022-08-30 20:52:26
+ * @LastEditTime: 2022-09-04 15:30:41
+ * @FilePath: /hao_learnOpenCV4/code/chapter3/myfindMinAndMax.cpp
+ * @Description: 
+ */
+#include <opencv2/opencv.hpp>
 #include <iostream>
 #include <vector>
 
@@ -7,22 +14,22 @@ using namespace cv;
 
 int main()
 {
-	system("color F0");  //¸ü¸ÄÊä³ö½çÃæÑÕÉ«
+	system("color F0");  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
 	float a[12] = { 1, 2, 3, 4, 5, 10, 6, 7, 8, 9, 10, 0 };
-	Mat img = Mat(3, 4, CV_32FC1, a);  //µ¥Í¨µÀ¾ØÕó
-	Mat imgs = Mat(2, 3, CV_32FC2, a);  //¶àÍ¨µÀ¾ØÕó
-	double minVal, maxVal;  //ÓÃÓÚ´æ·Å¾ØÕóÖÐµÄ×î´óÖµºÍ×îÐ¡Öµ
-	Point minIdx, maxIdx;  ////ÓÃÓÚ´æ·Å¾ØÕóÖÐµÄ×î´óÖµºÍ×îÐ¡ÖµÔÚ¾ØÕóÖÐµÄÎ»ÖÃ
+	Mat img = Mat(3, 4, CV_32FC1, a);  //ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	Mat imgs = Mat(2, 3, CV_32FC2, a);  //ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	double minVal, maxVal;  //ï¿½ï¿½ï¿½Ú´ï¿½Å¾ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ð¡Öµ
+	Point minIdx, maxIdx;  ////ï¿½ï¿½ï¿½Ú´ï¿½Å¾ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ð¡Öµï¿½Ú¾ï¿½ï¿½ï¿½ï¿½Ðµï¿½Î»ï¿½ï¿½
 
-	/*Ñ°ÕÒµ¥Í¨µÀ¾ØÕóÖÐµÄ×îÖµ*/
+	/*Ñ°ï¿½Òµï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½Öµ*/
 	minMaxLoc(img, &minVal, &maxVal, &minIdx, &maxIdx);
-	cout << "imgÖÐ×î´óÖµÊÇ£º" << maxVal << "  " << "ÔÚ¾ØÕóÖÐµÄÎ»ÖÃ:" << maxIdx << endl;
-	cout << "imgÖÐ×îÐ¡ÖµÊÇ£º" << minVal << "  " << "ÔÚ¾ØÕóÖÐµÄÎ»ÖÃ:" << minIdx << endl;
+	cout << "imgï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ç£ï¿½" << maxVal << "  " << "ï¿½Ú¾ï¿½ï¿½ï¿½ï¿½Ðµï¿½Î»ï¿½ï¿½:" << maxIdx << endl;
+	cout << "imgï¿½ï¿½ï¿½ï¿½Ð¡Öµï¿½Ç£ï¿½" << minVal << "  " << "ï¿½Ú¾ï¿½ï¿½ï¿½ï¿½Ðµï¿½Î»ï¿½ï¿½:" << minIdx << endl;
 
-	/*Ñ°ÕÒ¶àÍ¨µÀ¾ØÕóÖÐµÄ×îÖµ*/
-	Mat imgs_re = imgs.reshape(1, 4);  //½«¶àÍ¨µÀ¾ØÕó±ä³Éµ¥Í¨µÀ¾ØÕó
+	/*Ñ°ï¿½Ò¶ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½Öµ*/
+	Mat imgs_re = imgs.reshape(1, 4);  //ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	minMaxLoc(imgs_re, &minVal, &maxVal, &minIdx, &maxIdx);
-	cout << "imgsÖÐ×î´óÖµÊÇ£º" << maxVal << "  " << "ÔÚ¾ØÕóÖÐµÄÎ»ÖÃ:" << maxIdx << endl;
-	cout << "imgsÖÐ×îÐ¡ÖµÊÇ£º" << minVal << "  " << "ÔÚ¾ØÕóÖÐµÄÎ»ÖÃ:" << minIdx << endl;
+	cout << "imgsï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ç£ï¿½" << maxVal << "  " << "ï¿½Ú¾ï¿½ï¿½ï¿½ï¿½Ðµï¿½Î»ï¿½ï¿½:" << maxIdx << endl;
+	cout << "imgsï¿½ï¿½ï¿½ï¿½Ð¡Öµï¿½Ç£ï¿½" << minVal << "  " << "ï¿½Ú¾ï¿½ï¿½ï¿½ï¿½Ðµï¿½Î»ï¿½ï¿½:" << minIdx << endl;
 	return 0;
 }
