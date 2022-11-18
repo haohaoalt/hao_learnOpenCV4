@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hao007/github/hao_learnOpenCV4/code/chapter1
+CMAKE_SOURCE_DIR = /home/hao007/hao_learnOpenCV4/code/chapter1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hao007/github/hao_learnOpenCV4/code/chapter1/build
+CMAKE_BINARY_DIR = /home/hao007/hao_learnOpenCV4/code/chapter1/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -84,14 +84,14 @@ clean: CMakeFiles/testopencv.dir/clean
 CMakeFiles/camshiftdemo.dir/all:
 	$(MAKE) -f CMakeFiles/camshiftdemo.dir/build.make CMakeFiles/camshiftdemo.dir/depend
 	$(MAKE) -f CMakeFiles/camshiftdemo.dir/build.make CMakeFiles/camshiftdemo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles --progress-num=1,2 "Built target camshiftdemo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles --progress-num=1,2 "Built target camshiftdemo"
 .PHONY : CMakeFiles/camshiftdemo.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/camshiftdemo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/camshiftdemo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 0
 .PHONY : CMakeFiles/camshiftdemo.dir/rule
 
 # Convenience name for target.
@@ -111,14 +111,14 @@ CMakeFiles/camshiftdemo.dir/clean:
 CMakeFiles/videocapture_starter.dir/all:
 	$(MAKE) -f CMakeFiles/videocapture_starter.dir/build.make CMakeFiles/videocapture_starter.dir/depend
 	$(MAKE) -f CMakeFiles/videocapture_starter.dir/build.make CMakeFiles/videocapture_starter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles --progress-num=11,12 "Built target videocapture_starter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles --progress-num=11,12 "Built target videocapture_starter"
 .PHONY : CMakeFiles/videocapture_starter.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/videocapture_starter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/videocapture_starter.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 0
 .PHONY : CMakeFiles/videocapture_starter.dir/rule
 
 # Convenience name for target.
@@ -138,14 +138,14 @@ CMakeFiles/videocapture_starter.dir/clean:
 CMakeFiles/qrcode.dir/all:
 	$(MAKE) -f CMakeFiles/qrcode.dir/build.make CMakeFiles/qrcode.dir/depend
 	$(MAKE) -f CMakeFiles/qrcode.dir/build.make CMakeFiles/qrcode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles --progress-num=5,6 "Built target qrcode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles --progress-num=5,6 "Built target qrcode"
 .PHONY : CMakeFiles/qrcode.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/qrcode.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/qrcode.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 0
 .PHONY : CMakeFiles/qrcode.dir/rule
 
 # Convenience name for target.
@@ -165,14 +165,14 @@ CMakeFiles/qrcode.dir/clean:
 CMakeFiles/test_edge.dir/all:
 	$(MAKE) -f CMakeFiles/test_edge.dir/build.make CMakeFiles/test_edge.dir/depend
 	$(MAKE) -f CMakeFiles/test_edge.dir/build.make CMakeFiles/test_edge.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles --progress-num=7,8 "Built target test_edge"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles --progress-num=7,8 "Built target test_edge"
 .PHONY : CMakeFiles/test_edge.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_edge.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_edge.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_edge.dir/rule
 
 # Convenience name for target.
@@ -192,14 +192,14 @@ CMakeFiles/test_edge.dir/clean:
 CMakeFiles/kmeans_demo.dir/all:
 	$(MAKE) -f CMakeFiles/kmeans_demo.dir/build.make CMakeFiles/kmeans_demo.dir/depend
 	$(MAKE) -f CMakeFiles/kmeans_demo.dir/build.make CMakeFiles/kmeans_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles --progress-num=3,4 "Built target kmeans_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles --progress-num=3,4 "Built target kmeans_demo"
 .PHONY : CMakeFiles/kmeans_demo.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/kmeans_demo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/kmeans_demo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 0
 .PHONY : CMakeFiles/kmeans_demo.dir/rule
 
 # Convenience name for target.
@@ -219,14 +219,14 @@ CMakeFiles/kmeans_demo.dir/clean:
 CMakeFiles/testopencv.dir/all:
 	$(MAKE) -f CMakeFiles/testopencv.dir/build.make CMakeFiles/testopencv.dir/depend
 	$(MAKE) -f CMakeFiles/testopencv.dir/build.make CMakeFiles/testopencv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles --progress-num=9,10 "Built target testopencv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles --progress-num=9,10 "Built target testopencv"
 .PHONY : CMakeFiles/testopencv.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/testopencv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/testopencv.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles 0
 .PHONY : CMakeFiles/testopencv.dir/rule
 
 # Convenience name for target.

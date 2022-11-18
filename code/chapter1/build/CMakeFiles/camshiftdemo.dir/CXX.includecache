@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/hao007/github/hao_learnOpenCV4/code/chapter1/camshiftdemo.cpp
+/home/hao007/hao_learnOpenCV4/code/chapter1/camshiftdemo.cpp
 opencv2/core/utility.hpp
-/home/hao007/github/hao_learnOpenCV4/code/chapter1/opencv2/core/utility.hpp
+/home/hao007/hao_learnOpenCV4/code/chapter1/opencv2/core/utility.hpp
 opencv2/video/tracking.hpp
-/home/hao007/github/hao_learnOpenCV4/code/chapter1/opencv2/video/tracking.hpp
+/home/hao007/hao_learnOpenCV4/code/chapter1/opencv2/video/tracking.hpp
 opencv2/imgproc.hpp
-/home/hao007/github/hao_learnOpenCV4/code/chapter1/opencv2/imgproc.hpp
+/home/hao007/hao_learnOpenCV4/code/chapter1/opencv2/imgproc.hpp
 opencv2/videoio.hpp
-/home/hao007/github/hao_learnOpenCV4/code/chapter1/opencv2/videoio.hpp
+/home/hao007/hao_learnOpenCV4/code/chapter1/opencv2/videoio.hpp
 opencv2/highgui.hpp
-/home/hao007/github/hao_learnOpenCV4/code/chapter1/opencv2/highgui.hpp
+/home/hao007/hao_learnOpenCV4/code/chapter1/opencv2/highgui.hpp
 iostream
 -
 ctype.h

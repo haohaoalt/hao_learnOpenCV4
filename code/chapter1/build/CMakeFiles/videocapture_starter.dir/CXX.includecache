@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/hao007/github/hao_learnOpenCV4/code/chapter1/videocapture_starter.cpp
+/home/hao007/hao_learnOpenCV4/code/chapter1/videocapture_starter.cpp
 opencv2/imgcodecs.hpp
 -
 opencv2/videoio.hpp

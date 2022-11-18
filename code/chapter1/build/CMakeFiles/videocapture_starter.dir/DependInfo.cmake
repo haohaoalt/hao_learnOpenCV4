@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hao007/github/hao_learnOpenCV4/code/chapter1/videocapture_starter.cpp" "/home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles/videocapture_starter.dir/videocapture_starter.cpp.o"
+  "/home/hao007/hao_learnOpenCV4/code/chapter1/videocapture_starter.cpp" "/home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles/videocapture_starter.dir/videocapture_starter.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

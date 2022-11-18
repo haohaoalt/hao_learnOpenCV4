@@ -1,4 +1,4 @@
-# Install script for directory: /home/hao007/github/hao_learnOpenCV4/code/chapter1
+# Install script for directory: /home/hao007/hao_learnOpenCV4/code/chapter1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/hao007/github/hao_learnOpenCV4/code/chapter1/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/hao007/hao_learnOpenCV4/code/chapter1/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

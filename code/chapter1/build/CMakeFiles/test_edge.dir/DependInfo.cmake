@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hao007/github/hao_learnOpenCV4/code/chapter1/edge.cpp" "/home/hao007/github/hao_learnOpenCV4/code/chapter1/build/CMakeFiles/test_edge.dir/edge.cpp.o"
+  "/home/hao007/hao_learnOpenCV4/code/chapter1/edge.cpp" "/home/hao007/hao_learnOpenCV4/code/chapter1/build/CMakeFiles/test_edge.dir/edge.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
